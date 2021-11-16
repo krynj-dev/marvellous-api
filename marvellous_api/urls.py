@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from venues import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('get-venues', views.venue_list, name='venuelist')
 ]
